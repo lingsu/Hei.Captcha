@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Extensions.Options;
 using SixLabors.ImageSharp.Drawing.Processing;
+using System.Threading.Tasks;
 
 namespace Hei.Captcha
 {
@@ -197,11 +198,11 @@ namespace Hei.Captcha
         /// </summary>
         /// <param name="text"></param>
         /// <returns>验证码图片字节数组</returns>
-        public byte[] GetEnDigitalCodeByte(string text)
+        public async Task<byte[]> GetEnDigitalCodeByteAsync(string text)
         {
             using (Image<Rgba32> img = GetEnDigitalCodeImage(text))
             {
-                return img.ToGifArray();
+                return await img.ToGifArrayAsync();
             }
         }
 
