@@ -23,7 +23,7 @@ namespace Microsoft.Extensions.DependencyInjection
             }
 
 
-            services.AddAndyCaptcha((HeiCaptchaOptions hei) =>
+            services.AddHeiCaptcha((HeiCaptchaOptions hei) =>
             {
                 hei.FontSize = option.FontSize;
                 hei.FontPath = option.FontPath;
