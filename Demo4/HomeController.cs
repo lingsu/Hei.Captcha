@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Hei.Captcha;
 using System.Threading.Tasks;
+using Andy.Captcha;
 
 namespace Demo
 {
     public class HomeController : Controller
     {
         private readonly SecurityCodeHelper _securityCode;
+        private readonly ICaptcha _captcha;
 
-        public HomeController(SecurityCodeHelper securityCode)
+        public HomeController(SecurityCodeHelper securityCode, ICaptcha captcha)
         {
-            this._securityCode = securityCode;
+            _securityCode = securityCode;
+            _captcha = captcha;
         }
 
         public IActionResult Index()
@@ -36,8 +39,10 @@ namespace Demo
         /// <returns></returns>
         public async Task<IActionResult> HybridCode()
         {
-            var code = _securityCode.GetRandomEnDigitalText(4);
-            var imgbyte = await _securityCode.GetEnDigitalCodeByteAsync(code);
+            var vc = await _captcha.GenerateRandomEnDigitalTextAsync(4);
+            var imgbyte = _captcha.GetImage(vc.Token);
+            //var code = _securityCode.GetRandomEnDigitalText(4);
+            //var imgbyte = await _securityCode.GetEnDigitalCodeByteAsync(code);
 
             return File(imgbyte, "image/png");
         }

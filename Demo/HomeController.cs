@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Hei.Captcha;
+using System.Threading.Tasks;
 
 namespace Demo
 {
@@ -33,10 +34,10 @@ namespace Demo
         /// 数字字母组合验证码
         /// </summary>
         /// <returns></returns>
-        public IActionResult HybridCode()
+        public async Task<IActionResult> HybridCode()
         {
             var code = _securityCode.GetRandomEnDigitalText(4);
-            var imgbyte = _securityCode.GetEnDigitalCodeByte(code);
+            var imgbyte = await _securityCode.GetEnDigitalCodeByteAsync(code);
 
             return File(imgbyte, "image/png");
         }
