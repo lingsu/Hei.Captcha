@@ -8,11 +8,13 @@ namespace Andy.Captcha
     {
         public string Code { get; set; }
         public string Token { get; set; }
+        public byte[] ImageByte { get; set; }
 
-        public VerificationCode(string code, string token)
+        public VerificationCode(string code, string token, byte[] imageByte)
         {
             Code = code;
             Token = token;
+            ImageByte = imageByte;
         }
     }
 }

@@ -6,6 +6,7 @@ namespace Andy.Captcha
     public interface ICaptcha
     {
         Task<VerificationCode> GenerateRandomEnDigitalTextAsync(int length);
-        byte[] GetImage(string token);
+        VerificationCode GetVerificationCode(string token);
+        void DeleteVerificationCode(string token);
     }
 }

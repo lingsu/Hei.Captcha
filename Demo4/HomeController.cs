@@ -40,11 +40,11 @@ namespace Demo
         public async Task<IActionResult> HybridCode()
         {
             var vc = await _captcha.GenerateRandomEnDigitalTextAsync(4);
-            var imgbyte = _captcha.GetImage(vc.Token);
+            var verificationCode = _captcha.GetVerificationCode(vc.Token);
             //var code = _securityCode.GetRandomEnDigitalText(4);
             //var imgbyte = await _securityCode.GetEnDigitalCodeByteAsync(code);
 
-            return File(imgbyte, "image/png");
+            return File(verificationCode.ImageByte, "image/png");
         }
 
         /// <summary>
