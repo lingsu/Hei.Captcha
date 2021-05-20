@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Hei.Captcha\Hei.Captcha.csproj" />
+    <ProjectReference Include="..\Hei.Captcha\Andy.Hei.Captcha.csproj" />
   </ItemGroup>
 
 </Project>

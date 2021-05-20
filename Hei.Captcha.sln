@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hei.Captcha", "Hei.Captcha\Hei.Captcha.csproj", "{F9E290F9-C25D-4D25-8AAB-D6C4C109684D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Andy.Hei.Captcha", "Hei.Captcha\Andy.Hei.Captcha.csproj", "{F9E290F9-C25D-4D25-8AAB-D6C4C109654D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{9F2BE45E-FFAA-4C57-9C9F-C4A18B8C389C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo3", "Demo3\Demo3.csproj", "{29890F97-759D-411D-AB4E-C4D95140733B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Andy.Captcha", "Andy.Captcha\Andy.Captcha.csproj", "{A62FD0C9-A184-4696-A6B0-EDA676DBBCCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Andy.Captcha", "Andy.Captcha\Andy.Captcha.csproj", "{A62FD0C9-A184-4696-A6B0-EDA676DBBCCA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo4", "Demo4\Demo4.csproj", "{2BA83D86-A562-425C-8786-7BD53AA62EA0}"
 EndProject
@@ -19,10 +19,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9E290F9-C25D-4D25-8AAB-D6C4C109684D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9E290F9-C25D-4D25-8AAB-D6C4C109684D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9E290F9-C25D-4D25-8AAB-D6C4C109684D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9E290F9-C25D-4D25-8AAB-D6C4C109684D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E290F9-C25D-4D25-8AAB-D6C4C109654D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E290F9-C25D-4D25-8AAB-D6C4C109654D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E290F9-C25D-4D25-8AAB-D6C4C109654D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E290F9-C25D-4D25-8AAB-D6C4C109654D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F2BE45E-FFAA-4C57-9C9F-C4A18B8C389C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F2BE45E-FFAA-4C57-9C9F-C4A18B8C389C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2BE45E-FFAA-4C57-9C9F-C4A18B8C389C}.Release|Any CPU.ActiveCfg = Release|Any CPU
