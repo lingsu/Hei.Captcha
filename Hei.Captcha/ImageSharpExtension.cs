@@ -48,47 +48,10 @@ namespace Hei.Captcha
                         .DrawText(textOptions, textChar, color)
                         .Rotate(random.Next(-45, 45)));
                     currentContext = currentContext.DrawImage(img, point, 1);
-                    // img2.Mutate(ctx => ctx
-                    //     .DrawText(textGraphicsOptions, text[i].ToString(), scaledFont, color, new Point(0, 0))
-                    //     .Rotate(random.Next(-45, 45))
-                    // );
-                    //img.Mutate(ctx => ctx.DrawImage(img2, point, 1));
                 }
             }
 
             return currentContext;
-
-            // return processingContext.Apply(img =>
-            // {
-            //     if (string.IsNullOrEmpty(text) == false)
-            //     {
-            //         Random random = new Random();
-            //         var textWidth = (img.Width / text.Length);
-            //         var img2Size = Math.Min(textWidth, img.Height);
-            //         var fontMiniSize = (int)(img2Size * 0.6);
-            //         var fontMaxSize = (int)(img2Size * 0.95);
-            //
-            //         for (int i = 0; i < text.Length; i++)
-            //         {
-            //             using (Image<Rgba32> img2 = new Image<Rgba32>(img2Size, img2Size))
-            //             {
-            //                 Font scaledFont = new Font(font, random.Next(fontMiniSize, fontMaxSize));
-            //                 var point = new Point(i * textWidth, (containerHeight - img2.Height) / 2);
-            //                 var textGraphicsOptions = new TextGraphicsOptions(true)
-            //                 {
-            //                     HorizontalAlignment = HorizontalAlignment.Left,
-            //                     VerticalAlignment = VerticalAlignment.Top
-            //                 };
-            //
-            //                 img2.Mutate(ctx => ctx
-            //                     .DrawText(textGraphicsOptions, text[i].ToString(), scaledFont, color, new Point(0, 0))
-            //                     .Rotate(random.Next(-45, 45))
-            //                 );
-            //                 img.Mutate(ctx => ctx.DrawImage(img2, point, 1));
-            //             }
-            //         }
-            //     }
-            // });
         }
 
         public static IImageProcessingContext DrawingEnText(this IImageProcessingContext processingContext,
