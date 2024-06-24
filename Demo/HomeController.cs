@@ -35,7 +35,7 @@ namespace Demo
         /// <returns></returns>
         public IActionResult HybridCode()
         {
-            var code = _securityCode.GetRandomEnDigitalText(4);
+            var code = _securityCode.GetRandomEnDigitalText(5);
             var imgbyte = _securityCode.GetEnDigitalCodeByte(code);
 
             return File(imgbyte, "image/png");
@@ -59,7 +59,7 @@ namespace Demo
         /// <returns></returns>
         public IActionResult GifHybridCode()
         {
-            var code = _securityCode.GetRandomEnDigitalText(4);
+            var code = _securityCode.GetRandomEnDigitalText(5);
             var imgbyte = _securityCode.GetGifEnDigitalCodeByte(code);
 
             return File(imgbyte, "image/gif");
